@@ -1,7 +1,7 @@
 
 const express = require('express');
+const cors = require('cors');
 const { dbConnection } = require('./database/config');
-const cors = require('cors')
 require('dotenv').config();
 
 
@@ -26,5 +26,5 @@ app.use('/api/events', require('./routes/events'));
 
 app.listen(process.env.PORT, ()=>{
 
-    console.log('server en puerto 4000');
+    console.log(`server en puerto ${ process.env.PORT }`);
 })

@@ -57,7 +57,7 @@ const login = async ( req, res = response  )=>{
         if(!user){
             return res.status(400).json({
                 ok:false,
-                msg:'Email not exist'
+                msg:'Password or Email not exist'
             });
         }
 
@@ -66,7 +66,7 @@ const login = async ( req, res = response  )=>{
         if(!validPassword){
             return res.status(400).json({
                 ok:false,
-                msg:'Password not exist'
+                msg:'Password or Email not exist'
             });
         }
 
@@ -102,6 +102,8 @@ const renew = async ( req, res = response  )=>{
 
     res.json({
         ok:true,
+        uid,
+        name,
         token
     })
 }
