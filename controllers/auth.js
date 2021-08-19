@@ -102,7 +102,7 @@ const renew = async ( req, res = response  )=>{
 
     res.json({
         ok:true,
-        uid,
+        uid:id,
         name,
         token
     })
